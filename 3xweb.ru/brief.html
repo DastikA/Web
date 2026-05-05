@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнить бриф | 3XWEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Кастомный курсор создаст JS, здесь он не нужен -->
+
+    <!-- Шапка -->
+    <header style="position: relative; background: none; display: flex; justify-content: space-between; align-items: center; padding: 20px 4%;">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 5px;">
+            <div class="logo-box">3X</div>
+            <span>WEB</span>
+        </a>
+        <a href="index.html" class="btn-outline" style="text-decoration: none;">← На главную</a>
+    </header>
+
+    <main>
+        <section class="brief-section" id="brief">
+            <div class="container">
+                <div class="brief-header">
+                    <h2>Заполнить бриф</h2>
+                    <p>Шаг <span id="currentStep">1</span> из 3</p>
+                </div>
+
+                <div class="brief-form-container">
+                    <!-- ОСТАВЛЯЕМ ТОЛЬКО ОДНУ ФОРМУ С ПРАВИЛЬНЫМ ACTION -->
+                    <form id="quizForm" action="https://formspree.io/f/xlgzggjz" method="POST"></form>
+                        
+                        <!-- Шаг 1: Тип проекта -->
+                        <div class="brief-step active" data-step="1">
+                            <h3>Какой проект вас интересует?</h3>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="projectType" value="Landing" checked>
+                                    <span>Landing Page</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="projectType" value="Corporate">
+                                    <span>Корпоративный сайт</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="projectType" value="Store">
+                                    <span>Интернет-магазин</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="projectType" value="Support">
+                                    <span>Поддержка / Редизайн</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 2: Бюджет -->
+                        <div class="brief-step" data-step="2">
+                            <h3>Планируемый бюджет (руб)</h3>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="budget" value="50-150" checked>
+                                    <span>50 000 — 150 000</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="budget" value="150-300">
+                                    <span>150 000 — 300 000</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="budget" value="300+">
+                                    <span>От 300 000</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 3: Контакты -->
+                        <div class="brief-step" data-step="3">
+                            <h3>Оставьте ваши контакты</h3>
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="Ваше имя" required>
+                                <input type="tel" name="phone" placeholder="Телефон / Telegram" required>
+                                <textarea name="comment" placeholder="Дополнительные пожелания"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="brief-nav">
+                            <button type="button" id="prevBtn" class="btn-outline" style="display:none;">Назад</button>
+                            <button type="button" id="nextBtn" class="btn-main">Далее</button>
+                            <button type="submit" id="submitBtn" class="btn-main" style="display:none;">Отправить бриф</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

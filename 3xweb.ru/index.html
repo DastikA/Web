@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3XWEB — современное digital-агентство. Разработка, поддержка и продвижение сайтов.">
+    <meta name="keywords" content="разработка сайтов, заказать сайт, 3xweb, веб-студия">
+    <title>3xweb | Digital Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ico.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Полноэкранное меню -->
+    <div id="fullMenu" class="full-menu">
+        <button class="close-menu" id="closeBtn">✕</button>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="#">О компании</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#services">Услуги</a>
+            <a href="brief.html">Заполнить бриф</a>
+            <a href="mailto:hello@3xweb.ru">Контакты</a>
+        </nav>
+        
+        <div class="menu-footer">
+            <div class="menu-contact-item">
+                <span>Адрес:</span>
+                <p>Москва, ул. Электродная, д. 2, стр. 12</p>
+            </div>
+            <div class="menu-contact-item">
+                <span>Телефон:</span>
+                <a href="tel:+74955325615">+7 (495) 532-56-15</a>
+            </div>
+            <div class="menu-socials">
+                <a href="#">TG</a>
+                <a href="#">VK</a>
+                <a href="#">BE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шапка -->
+    <header>
+        <div class="burger" id="burgerBtn">
+            <span></span>
+            <p>Меню</p>
+        </div>
+        <a href="index.html" class="logo">
+            <div class="logo-box">3X</div>
+            <span>WEB</span>
+        </a>
+        <div class="header-right">
+            <a href="tel:+74955325615" class="phone">+7 (495) 532-56-15</a>
+            <a href="brief.html" class="btn-request">Оставить заявку</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран -->
+        <section class="hero">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="fon-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <h1 id="changingText">Интересует Разработка веб-сайта</h1>
+                <button class="btn-main" onclick="window.location.href='brief.html'">Узнать стоимость</button>
+            </div>
+        </section>
+
+        <!-- Блок услуг -->
+        <section class="services" id="services">
+            <h2>Наши Услуги</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="service-num">01</span>
+                    <div class="service-info">
+                        <h3>Разработка</h3>
+                        <p>Сайт-визитка, Корпоративный сайт, Landing Page, Интернет-магазин</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="service-num">02</span>
+                    <div class="service-info">
+                        <h3>Поддержка</h3>
+                        <p>Техническая поддержка, дизайн-сопровождение, редизайн</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <span class="service-num">03</span>
+                    <div class="service-info">
+                        <h3>Продвижение</h3>
+                        <p>SEO аудит, реклама, копирайтинг</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Портфолио -->
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-container">
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <span class="card-tag">E-commerce</span>
+                        <img src="alpine.jpg" alt="Alpine Project" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="card-info">
+                        <h3>Alpine Project</h3>
+                        <p>Редизайн и разработка магазина</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <span class="card-tag">Corporate</span>
+                        <img src="lamborghiniurus.jpg" alt="Lambo Project" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="card-info">
+                        <h3>Urus IT-Case</h3>
+                        <p>Сайт под ключ с интеграциями</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-outline">Все работы</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-main">
+            <h2>Давайте <br><span>обсудим ваш</span> проект?</h2>
+            <a href="mailto:hello@3xweb.ru" class="footer-email">hello@3xweb.ru</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 3XWEB Digital Agency</p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Telegram</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Модальное окно заявки -->
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+            <h2>Обсудить проект</h2>
+            <p>Оставьте контакты, и мы свяжемся с вами</p>
+            <!-- Добавил action и name для полей -->
+            <form action="https://formspree.io/f/xlgzggjz" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Номер телефона" required>
+                <textarea name="message" placeholder="Расскажите о задаче"></textarea>
+                <button type="submit" class="btn-main">Отправить запрос</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
